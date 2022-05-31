@@ -1,0 +1,469 @@
+/* 1. Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    /*background: url('../img/background.png') no-repeat center;
+    background-size: cover;*/
+}
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.title {
+    position: relative;
+    font-size: 3.125rem;
+    font-weight: bold;
+    justify-content: center;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.full-height {
+    min-height: 85vh;
+}
+
+.form-group {
+    padding-bottom: 10vh;
+}
+
+.base-container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.narrow-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.customized-arrow-up {
+    font-size: 2em;
+    position: fixed;
+    right: 4vh;
+    bottom: 4vh;
+    color: black;
+    z-index: 999;
+}
+
+.customized-arrow-up:hover {
+    cursor: pointer;
+    color: #eed01d;
+    transition: all 0.3s ease;
+}
+
+/*Off useless bootstrap config.*/
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.btn-warning {
+    background-color: #eed01d;
+}
+
+/* 2. Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.logo {
+    cursor: context-menu;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30%;
+}
+
+.customized-nav-button {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease 0s;
+}
+
+.customized-nav-button:hover {
+    background-color: #eed01d;
+}
+
+.customized-nav-button:active {
+    transition: margin 0.1s ease;
+    margin: 5px 5px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+}
+
+/* 3. About Me */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    min-height: 60vh;
+    margin-bottom: 10vh;
+    transition: all 0.3s;
+}
+
+.slider section {
+    align-items: center;
+}
+
+.controls .arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.controls ul {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.controls ul li {
+    margin: 0.5em;
+    border: 0.5em solid #d5d5d5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    border: 0.5em solid black;
+}
+
+.left-side {
+    text-align: right;
+}
+
+.right-side {
+    padding-right: 2vw;
+}
+
+.center-vertically {
+    margin: auto 0;
+}
+
+.avatar {
+    max-width: 400px;
+    border-radius: 50%;
+    margin-right: 1.5em;
+}
+
+.icons {
+    display: inline-flex;
+    font-size: 50px;
+}
+
+.customized-icons {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+}
+
+.customized-icons:hover {
+    color: #eed01d;
+}
+
+.customized-icons:active {
+    transition: font-size 0.1s ease;
+    font-size: 45px;
+}
+
+/* 3.1. Professional Info*/
+
+.nickname {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* 3.2. Real Life Info*/
+
+.full-name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* 4. Projects */
+
+h3 {
+    padding: 0.5em 0;
+}
+
+.poll-project {
+    display: flex;
+    align-items: center;
+}
+
+/* 5. Skills */
+
+.article {
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.img-side {
+    max-width: 10em;
+    padding-right: 5%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.description-side {
+    font-size: 1.25rem;
+}
+
+.skill-icons {
+    padding: 25px 0;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+.customized-skill-icon {
+    padding: 5px 25px;
+    background-color: #eed01d;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* 6. Contact Me */
+
+.form-field {
+    padding: 8px 0;
+}
+
+.counter {
+    padding-bottom: 8px;
+}
+
+/* 7. Donate */
+
+/*.donation {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.dollar-sign {
+    color: #eed01d;
+    font-size: 500px;
+    text-align: center;
+}*/
+
+.warning {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    min-height: 85vh;
+    align-items: center;
+    font-size: 3.125rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 8. Responsive Design */
+
+.split-two-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.split-two-section > * {
+    flex-basis: 100%;
+}
+
+@media screen and (max-width: 67.5rem) {
+    .avatar {
+        margin-right: 0;
+    }
+
+    .img-side {
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .split-two-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-side,
+    .right-side {
+        display: flex;
+        align-items: center;
+    }
+
+    .skill-icons {
+        display: block;
+    }
+
+    .skill-icons li {
+        text-align: center;
+        border: 10px solid white;
+    }
+
+    .narrow-container {
+        width: 90%;
+    }
+
+    .customized-arrow-up {
+        font-size: 1.5em;
+        bottom: 2vh;
+        right: 2vh;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .nav-buttons {
+        width: 60%;
+        padding-right: 15%;
+    }
+}
+
+@media screen and (max-width: 79.5em) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .icons {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .buttons {
+        transform: scale(1, 0);
+        /*transform: translateX(100%);*/
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.95);
+        top: 0;
+        width: 90%;
+        z-index: 999;
+    }
+
+    .nav-buttons {
+        display: block;
+        padding-top: 2vh;
+        float: right;
+        padding-right: 10%;
+    }
+
+    .burger {
+        z-index: 999;
+        position: absolute;
+        display: block;
+        right: 5%;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+.show-menu {
+    /*transform: translateX(0);*/
+    transform: scale(1, 1);
+}
+
+.narrow-p {
+    max-width: 39rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 9. Helping Properties */
+
+.center-text {
+    text-align: center;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}

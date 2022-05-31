@@ -1,0 +1,261 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AnoMorCH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio_app/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/d41b91cba2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <h3 class="center-text">AnoMorCH <br> portfolio</h3>
+        </div>
+
+        <div class="buttons">
+            <ul class="nav-buttons">
+                <li name="projects-button" class="customized-nav-button">Projects</li>
+                <li name="skills-button" class="customized-nav-button">Skills</li>
+                <li name="contact-button" class="customized-nav-button">Contact</li>
+                <a href="{% url 'portfolio_app:donate' %}">
+                    <li class="customized-nav-button">Donate</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div name="arrow-up" class="hidden">
+        <i class="fas fa-chevron-up customized-arrow-up"></i>
+    </div>
+
+    <div name="about-me" class="base-container">
+        <div class="carousel">
+            <div class="slider">
+                <section name="working-info" class="split-two-section">
+                    <div class="left-side center-vertically">
+                        <img src="{% static 'portfolio_app/img/avatar.jpg' %}" alt="My Avatar" class="avatar">
+                    </div>
+
+                    <div class="right-side">
+                        <div class="content center-vertically">
+                            <span class="nickname">AnoMorCH</span>
+                            <p>
+                                I am passionate about fullstack development with a little experience,
+                                but a great desire of a work
+                            </p>
+
+                            {% include 'portfolio_app/include-icons.html' %}
+                        </div>
+                    </div>
+                </section>
+
+                <section name="personal-info" class="split-two-section">
+                    <div class="left-side center-vertically">
+                        <img src="{% static 'portfolio_app/img/real-avatar.jpg' %}" alt="My Avatar" class="avatar">
+                    </div>
+
+                    <div class="right-side center-vertically">
+                        <div class="content">
+                            <p class="full-name">Morozov Anton Aleksanrovich</p>
+                            <p>Murino, suburb of Saint Petersburg</p>
+                            <p>
+                                I am a computer science student at SPBSTU. I like programming, sport and travel.
+                                Also, I spent my leisure time with movies, video games and books
+                            </p>
+
+                            {% include 'portfolio_app/include-icons.html' %}
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="controls">
+                <span class="arrow left">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+
+                <span class="arrow right">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+
+                <ul name="carousel-nav">
+                    <li class="selected"></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div name="projects" class="base-container">
+        <div class="title">My Projects</div>
+
+        <div class="poll-project">
+            <div class="split-two-section">
+                <div class="left-side center-vertically">
+                    <img src="{% static 'portfolio_app/img/poll-project.png' %}" alt="Poll Project Cover">
+                </div>
+
+                <div class="right-side center-vertically">
+                    <div class="content">
+                        <h3>Poll Project</h3>
+                        <p>
+                            Poll Project helps communities make elections to choose a candidate for some position.
+                            Everyone can make a choice and become a candidate. To control if the form is correct
+                            there is a moderator system. Also, there is an admin system to control the whole
+                            process.
+                        </p>
+
+                        <ul class="icons inline-flex">
+                            <li>
+                                <a class="customized-icons" href="#" target="_blank">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="customized-icons" href="https://github.com/AnoMorCH" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="customized-icons" href="https://anomorch-poll-project.herokuapp.com/"
+                                   target="_blank">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="customized-icons" href="#" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div name="skills" class="base-container">
+        <div class="title">My Skills</div>
+
+        <div class="narrow-container">
+            <div name="django" class="article">
+                <div class="split-two-section">
+                    <div class="img-side">
+                        <img src="{% static 'portfolio_app/img/django-icon.png' %}" alt="Django Icon">
+                    </div>
+
+                    <div class="description-side">
+                        <h3>Django</h3>
+                        I can connect your web page to a server and write all inner logic you need: authorisation form,
+                        account or communication system, analyse of incoming data and a lot of else! I have published
+                        two project connected with the technology on my GitHub account.
+                    </div>
+                </div>
+            </div>
+
+            <div name="html/css" class="article">
+                <div class="split-two-section">
+                    <div class="img-side">
+                        <img src="{% static 'portfolio_app/img/layout-icon.png' %}" alt="Layout Icon">
+                    </div>
+
+                    <div class="description-side">
+                        <h3>HTML/CSS</h3>
+                        I can make layout of page you want to. I can write forums, blogs, online shop or your personal
+                        webpage like this. I have four GitHub projects with rich layout on the GitHub.
+                    </div>
+                </div>
+            </div>
+
+            <div name="js" class="article">
+                <div class="split-two-section">
+                    <div class="img-side">
+                        <img src="{% static 'portfolio_app/img/js-icon.png' %}" alt="JS Icon">
+                    </div>
+
+                    <div class="description-side">
+                        <h3>JavaScript</h3>
+                        I can help you to make your webpage look fresh and appealing using a lot of beautiful styles and
+                        animations. Result of the work you can see on this page and other my projects.
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-text"><h3>Other Skills</h3></div>
+
+            <ul class="skill-icons">
+                <li class="customized-skill-icon">Python</li>
+                <li class="customized-skill-icon">Postgres SQL</li>
+                <li class="customized-skill-icon">AWS</li>
+            </ul>
+        </div>
+    </div>
+
+    <div name="contact" class="base-container">
+        <div class="title">Get In Touch</div>
+
+        <div class="form-group narrow-container full-height">
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <div class="form-field">
+                    Email
+                    {{ form.from_email }}
+                </div>
+
+                <div class="form-field">
+                    Subject
+                    {{ form.subject }}
+                </div>
+
+                <div class="form-field">
+                    Message
+                    {{ form.message }}
+                </div>
+
+                <p class="counter"><span>X</span> symbols are left</p>
+
+                <button type="submit" class="btn btn-warning btn-lg bold-font">Submit</button>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="center-text">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="{% static 'portfolio_app/js/carousel.js' %}"></script>
+<script src="{% static 'portfolio_app/js/input-message-counter.js' %}"></script>
+<script src="{% static 'portfolio_app/js/scroll-navbar.js' %}"></script>
+<script src="{% static 'portfolio_app/js/scroll-up-button.js' %}"></script>
+<script src="{% static 'portfolio_app/js/burger-navbar.js' %}"></script>
+<script src="{% static 'portfolio_app/js/set-height-full-page-under-dynamic-div.js' %}"></script>
+</body>
+
+</html>
