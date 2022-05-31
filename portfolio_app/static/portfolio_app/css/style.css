@@ -202,6 +202,11 @@ nav {
     text-align: right;
 }
 
+.left-side.project-avatar {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
 .right-side {
     padding-right: 2vw;
 }
@@ -258,7 +263,9 @@ h3 {
     padding: 0.5em 0;
 }
 
-.poll-project {
+.poll-project,
+.simetra {
+    padding-bottom: 1em;
     display: flex;
     align-items: center;
 }
