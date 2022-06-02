@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'https://anomorch-portfolio-project.herokuapp.com/',
+    'anomorch-portfolio-project.herokuapp.com',
 ]
 
 
