@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://anomorch-portfolio-project.herokuapp.com/',
+    'https://anomorch-portfolio-project.herokuapp.com',
 ]
 
 
