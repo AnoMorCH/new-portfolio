@@ -37,6 +37,10 @@ ALLOWED_HOSTS = [
     'anomorch-portfolio-project.herokuapp.com',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'anomorch-portfolio-project.herokuapp.com',
+]
+
 
 # Application definition
 
